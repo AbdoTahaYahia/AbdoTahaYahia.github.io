@@ -17,11 +17,15 @@
     submitBtn.innerHTML = '<span class="btn-spinner"></span>';
     submitBtn.classList.add('btn-loading');
 
+    const name = document.getElementById('form-name').value;
+    const email = document.getElementById('form-email').value;
+    const message = document.getElementById('form-message').value;
+
     const templateParams = {
       title: 'Portfolio Contact',
-      name: document.getElementById('form-name').value,
-      email: document.getElementById('form-email').value,
-      message: document.getElementById('form-message').value,
+      name: name,
+      email: email,
+      message: 'From: ' + email + '\n\n' + message,
     };
 
     emailjs.send('service_eli7fjo', 'template_05i2yrh', templateParams)
