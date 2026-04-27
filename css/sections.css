@@ -285,6 +285,32 @@
 
 .btn-secondary:hover { border-color: var(--text-primary); background: var(--accent-glow); }
 
+.btn-cv {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--accent-border);
+  gap: 8px;
+}
+
+.btn-cv svg {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.btn-cv:hover {
+  border-color: var(--text-primary);
+  background: var(--accent-glow);
+}
+
+.btn-cv:hover svg {
+  transform: translateY(3px);
+  animation: downloadBounce 0.6s ease-in-out infinite;
+}
+
+@keyframes downloadBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
 .btn .btn-arrow { transition: transform var(--duration-fast) var(--ease-out); font-size: 1.1em; }
 .btn:hover .btn-arrow { transform: translateX(4px); }
 
